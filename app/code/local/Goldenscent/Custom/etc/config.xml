@@ -74,6 +74,9 @@
           </sales_order_place_after_handler>
         </observers>
       </sales_order_place_after>
+      
+      
+      
     </events>
   </global>
 </config> 
