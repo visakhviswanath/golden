@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Goldenscent_Custom>
+      <active>true</active>
+      <codePool>local</codePool>
+      <version>0.1.0</version>
+    </Goldenscent_Custom>
+  </modules>
+</config>
