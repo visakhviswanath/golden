@@ -1,0 +1,6 @@
+07/Mar/2017 Worked 4hours
+
+Setup local envirnment with sample data
+Set cookie through link
+Create module and add partner name after order creation. 
+Admin side parner column created in order grid, but failed to display data, working on it. 
