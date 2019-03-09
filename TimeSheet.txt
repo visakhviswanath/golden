@@ -1,9 +1,12 @@
-07/Mar/2019 Worked 4hours
+07/Mar/2019 Worked 4hours -----------
 
 Setup local envirnment with sample data
 Set cookie through link
 Create module and add partner name after order creation. 
 Admin side parner column created in order grid, but failed to display data, working on it. 
 
-08/Mar/2019 Worked 3 hours
+08/Mar/2019 Worked 3 hours ------------
 Fixed issues in display the partner name in adminhtml
+
+09/Mar/2019 worked 4 hours for Shipment Splitting -----------
+Shipment splits to for an order. 
