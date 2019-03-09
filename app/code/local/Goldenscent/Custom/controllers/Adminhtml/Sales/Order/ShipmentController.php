@@ -68,10 +68,8 @@ class Goldenscent_Custom_Adminhtml_Sales_Order_ShipmentController extends Mage_A
     {        
             $qtys = $this->_getItemQtys();
             $allItems = array();
-
             $order = $shipment->getOrder();
             $items = $shipment->getOrder()->getItemsCollection();
-     
             foreach ($qtys as $itemId => $qty) {
                 while ($qty--) $allItems[] = $itemId;
             }
@@ -95,26 +93,30 @@ class Goldenscent_Custom_Adminhtml_Sales_Order_ShipmentController extends Mage_A
             }
 
             $shipments = array();
-            if (count($groups) > 1) {
-                
-                $ceilvalue = (count($groups)/2);
-                $half1 = ceil($ceilvalue);
-                $half2 = count($groups)-$half1;
-                if($half1>0 && $half2 >0)
-                {
-                            foreach ($groups as $data) {
-                            $groupItems = array();
-                            $groupItems2 = array();
-                            foreach ($data['items'] as $itemId) {
-                                    $groupItems[$itemId] = $half1;
-                                    $groupItems2[$itemId] = $half2;
-                            }
-                        }
-                        $shipments[] = Mage::getModel('sales/service_order', $order)->prepareShipment($groupItems);
-                        $shipments[] = Mage::getModel('sales/service_order', $order)->prepareShipment($groupItems2); 
-                }
+            if($order->getPartner()!=""){
+                if (count($groups) > 1) {
 
-            } else {
+                    $ceilvalue = (count($groups)/2);
+                    $half1 = ceil($ceilvalue);
+                    $half2 = count($groups)-$half1;
+                    if($half1>0 && $half2 >0)
+                    {
+                                foreach ($groups as $data) {
+                                $groupItems = array();
+                                $groupItems2 = array();
+                                foreach ($data['items'] as $itemId) {
+                                        $groupItems[$itemId] = $half1;
+                                        $groupItems2[$itemId] = $half2;
+                                }
+                            }
+                            $shipments[] = Mage::getModel('sales/service_order', $order)->prepareShipment($groupItems);
+                            $shipments[] = Mage::getModel('sales/service_order', $order)->prepareShipment($groupItems2); 
+                    }
+
+                } 
+            }
+            
+            else {
                 $shipments[] = $shipment;
             }
             return $shipments;

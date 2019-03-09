@@ -5,6 +5,17 @@
         <version>0.1.0</version>
       </Goldenscent_Custom>
     </modules>
+    <frontend>
+        <routers>
+            <cms>
+                <args>
+                    <modules>
+                        <custom before="Mage_Cms">Goldenscent_Custom</custom>
+                    </modules>
+                </args>
+            </cms>
+        </routers>
+    </frontend>
     <admin>
         <routers>
             <adminhtml>

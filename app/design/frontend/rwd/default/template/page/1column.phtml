@@ -52,13 +52,6 @@
                 <?php echo $this->getChildHtml('breadcrumbs') ?>
                 <div class="col-main">
                     <?php echo $this->getChildHtml('global_messages') ?>
-                    <?php //echo 'here';?>
-                    <?php $pname = $this->getRequest()->getParam('partner');
-                          setcookie('partnerName', $pname, time() + (60 * 30), "/");
-                          if(isset($_COOKIE['partnerName'])) {
-                            echo "pname is " . $_COOKIE['partnerName'];
-                        }
-                    ?>
                     
                     <?php echo $this->getChildHtml('content') ?>
                 </div>

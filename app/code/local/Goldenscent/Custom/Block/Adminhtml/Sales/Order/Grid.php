@@ -5,9 +5,7 @@ class Goldenscent_Custom_Block_Adminhtml_Sales_Order_Grid extends Mage_Adminhtml
     
     protected function _prepareCollection() {
         $collection = parent::_prepareCollection()->getCollection();
-        $collection->addFieldToSelect('partner');
-        
-        
+        $collection->addFieldToSelect('partner');    
         return $this;
     }
       public function setCollection($collection)

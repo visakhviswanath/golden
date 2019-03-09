@@ -10,3 +10,8 @@ Fixed issues in display the partner name in adminhtml
 
 09/Mar/2019 worked 4 hours for Shipment Splitting -----------
 Shipment splits to for an order. 
+
+09/Mar/2019 Worked 6 hours for error fixing and Invoice creation ----
+Invoice Created
+Errors fixed
+Code redefined
